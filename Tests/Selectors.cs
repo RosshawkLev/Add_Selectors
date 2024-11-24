@@ -34,10 +34,9 @@ namespace Selectors
             // Перевіряємо, що товар більше не відображається.
             var emptyCartTitle = driver.FindElement(By.XPath("//p[text()='No coffee, go add some.']"));
             Assert.That(emptyCartTitle.Text, Is.EqualTo("No coffee, go add some."), "Cappuccino should be removed from the cart.");
+        }
 
-
-
-            [TearDown]
+        [TearDown]
         public void TearDown()
         {
             driver.Quit();
